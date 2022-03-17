@@ -1,0 +1,218 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+}
+
+body {
+  color: white;
+  margin: 0;
+  padding: 0;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+header {
+  box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+  transform-style: inherit;
+  width: 100vw;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: red;
+}
+
+header h1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateZ(-1px) scale(2);
+}
+
+header,
+header:before {
+  background: 50% 50% / cover;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  background: url(../images/z.png);
+  background-size: cover;
+  transform-origin: center center 0;
+  transform: translateZ(-1px) scale(2.5);
+  z-index: -1;
+  min-height: 100vh;
+  background-size: contain;
+  background-position: 86% 9px;
+  background-repeat: no-repeat;
+  filter: brightness(0.2);
+}
+#hwa {
+  position: absolute;
+  top: 243px;
+  left: 0;
+  transform: translateZ(-1.7px) scale(2.4);
+  min-height: 100vh;
+  filter: blur(4px);
+}
+
+.container {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgb(0 0 0) 1%,
+    rgba(0, 0, 0, 1) 8%
+  );
+  z-index: 2;
+  position: absolute;
+  top: 100vh;
+  line-height: 30px;
+  font-weight: lighter;
+  padding: 40px;
+  color: grey;
+  height: 200vh;
+  width: 100%;
+}
+#princip {
+  z-index: 700000;
+  width: 100%;
+  bottom: -73px;
+  position: absolute;
+  right: 0;
+  filter: grayscale(1) brightness(0.001);
+  object-fit: cover;
+  transform: scale(1.15) translateZ(-0.15px);
+  transform-origin: center center 0;
+}
+#bg {
+  position: absolute;
+  transform: translateZ(-2px) scale(3);
+  z-index: -100;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+  left: 0;
+}
+#smoke {
+  left: 0;
+  width: 100%;
+  filter: opacity(0.8);
+  position: absolute;
+  transform: translatez(-0.5px) scale(1.5);
+}
+.storys {
+  z-index: 100000;
+  display: grid;
+  grid-template-rows: 45% 45%;
+  grid-template-columns: 30% 30% 30%;
+  width: 80%;
+  position: absolute;
+  top: 153vh;
+  height: 107vh;
+  justify-content: space-around;
+  align-content: space-around;
+}
+.storys::after {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "top 6 horror caracters";
+  position: absolute;
+  width: 228px;
+  height: 128px;
+  background-color: #450103;
+  top: 50%;
+  right: 0;
+  transform: translate(93%, -50%);
+  z-index: -25;
+  font-weight: 800;
+}
+.monster {
+  position: absolute;
+  width: 90%;
+  height: 95%;
+  background-color: red;
+  transform-style: preserve-3d;
+  top: 0;
+  right: 5%;
+}
+.cont_mon {
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform-origin: center center 0;
+  position: relative;
+  transition-duration: 2s;
+}
+.back {
+  transform-origin: center center 0;
+  transform: rotateY(180deg);
+  background-color: gray;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  height: 95%;
+  transform-style: preserve-3d;
+  background: radial-gradient(
+    circle,
+    rgb(255 255 255) 0%,
+    rgba(255, 255, 255, 1) 1%,
+    grey 100%
+  );
+}
+.monster,
+.back {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.chi {
+  height: 100%;
+}
+.chi:hover .cont_mon {
+  transform: rotateY(180deg);
+  transform-origin: center bottom 0;
+}
+.chi h3 {
+  text-align: center;
+  font-size: 32px;
+  transform: translateZ(167px);
+}
+.monster img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.back h4 {
+  color: #450103;
+  text-align: center;
+  font-size: 32px;
+  transform: translateZ(167px);
+}
+.back p {
+  color: #ff000099;
+  padding: 3px;
+  text-align: center;
+  font-size: 17px;
+  transform: translateZ(99px);
+}
